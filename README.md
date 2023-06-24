@@ -34,3 +34,21 @@ I collected nearly 2200 microscope images for the U-Net model training and evalu
 ![alt text](./example/sartorius_example.png "Example of Sartorius")
 *Figure Sartorius example. (Left) Phase contrast image of SHSY-5Y cells; (Right) annotation.*
 
+## Deep neural model for cell objects segmentation: U-Net
+U-Net employs convolutional and MaxPooling layers in the contracting state (feature extraction), and deconvolutional and pooling layers in the upsampling state to reach the original resolution.
+
+## U-Net model training and testing
+![alt_text](./example/train_IoU.png "IoU")
+*Figure IoU of training and validation dataset.*
+
+![alt_text](./example/train_DICE.png "DICE")
+*Figure DICE of training and validation dataset.*
+
+![alt_text](./example/test_UNet.png "Testing results of UNet")
+*Figure Testing results of UNet model. 16 images used in the test were showed as 'Original', their groundtruth as 'GroundTruth', and the model generated label as 'Predicted''.*
+
+## Model deployment
+An API interface has been built for the cell segmentation model by using FastAPI. 
+
+## UI interface 
+An UI frontend has been built by using streamlit. The streamlit server is hosted on Paperspace. However, it is not in running right now. 
